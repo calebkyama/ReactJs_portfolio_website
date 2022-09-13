@@ -1,23 +1,17 @@
 .app__navbar {
   width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur(4px);
-
-  //   The term 'webkit' is used in the CSS syntax
-  //   for rendering content in Safari and Chrome browsers.
   -webkit-backdrop-filter: blur(4px);
-
   border: 1px solid rgba(255, 255, 255, 0.18);
-
-  //so that it stays on top
   position: fixed;
-
-  //make it appear above the content
   z-index: 2;
 }
 
@@ -26,18 +20,17 @@
   justify-content: flex-start;
   align-items: center;
 
-  //target image inside the logo. Unique to scss
   img {
-    width: 160px;
-    height: 40px;
+    width: 90px;
+    height: 20px;
 
-    //increase screen size for extra large devices
-    @media screen and (min-width: 200px) {
-      width: 320px;
-      height: 80px;
+    @media screen and (min-width: 2000px) {
+      width: 180px;
+      height: 40px;
     }
   }
 }
+
 .app__navbar-links {
   flex: 1;
   display: flex;
@@ -45,6 +38,7 @@
   align-items: center;
 
   list-style: none;
+
   li {
     margin: 0 1rem;
     cursor: pointer;
@@ -52,45 +46,41 @@
     flex-direction: column;
 
     div {
-      width: 20px;
+      width: 5px;
       height: 5px;
       background: transparent;
       border-radius: 50%;
 
       margin-bottom: 5px;
-
-      transition: all 0.3s ease-in-out;
     }
 
     a {
-      //use theme variables that we created inside index.css
-      color: var(--purple-color);
+      color: var(--gray-color);
       text-decoration: none;
       flex-direction: column;
-      text-transform: uppercase;
 
+      text-transform: uppercase;
       font-weight: 500;
 
       transition: all 0.3s ease-in-out;
 
-      //& shows that we are reffering to the element we
-      //are in. Unique to scss
       &:hover {
-        color: var(--maroon-color);
+        color: var(--secondary-color);
       }
     }
 
-    //make the oval shape over the links visible.
     &:hover {
       div {
-        background: var(--maroon-color);
+        background: var(--secondary-color);
       }
     }
   }
+
   @media screen and (max-width: 900px) {
     display: none;
   }
 }
+
 .app__navbar-menu {
   width: 35px;
   height: 35px;
@@ -100,7 +90,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--purple-color);
+  background-color: var(--secondary-color);
 
   svg {
     width: 70%;
@@ -136,7 +126,7 @@
     svg {
       width: 35px;
       height: 35px;
-      color: var(--maroon-color);
+      color: var(--secondary-color);
       margin: 0.5rem 1rem;
     }
 
@@ -165,7 +155,7 @@
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            color: var(--purple-color);
+            color: var(--secondary-color);
           }
         }
       }
