@@ -19,15 +19,14 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I Know that <span>Good Design</span> <br />
-        means <span>Good Business</span>
+        I make <span>responsive</span> websites
       </h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.5, type: "tween" }}
             className="app__profile-item"
             key={about.title + index}

@@ -1,11 +1,19 @@
 import React from "react";
-import { NavigationDots, SocialMedia } from "../components";
+import { SocialMedia } from "../components";
 
-const AppWrap = (Component, idname, classNames) =>
+const AppWrap = (Component, idName, classNames) =>
   function HOC() {
     return (
       <div id={idName} className={`app__container ${classNames}`}>
-        AppWrap
+        <SocialMedia />
+        <div className="app__wrapper app__flex">
+          <Component />
+
+          <div className="copyright">
+            <p className="p-text">caleb kyama</p>
+          </div>
+        </div>
+        {/* <NavigationDots active={idName} /> */}
       </div>
     );
   };
