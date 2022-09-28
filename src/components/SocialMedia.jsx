@@ -17,7 +17,7 @@ const SocialMedia = () => {
 
       <div>
         <a
-          href="https://twitter.com/the_only_kyama"
+          href="https://twitter.com/caleb.kyama"
           target="_blank"
           rel="noreferrer"
         >
